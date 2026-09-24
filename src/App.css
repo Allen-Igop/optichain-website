@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --navy: #101820;
+  --navy-soft: #18222c;
+  --red: #ef1d2b;
+  --red-dark: #d91522;
+  --text: #101820;
+  --muted: #667487;
+  --border: #d8dce1;
+  --off-white: #f8f8f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--text);
+  background: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 90px;
+  width: 100%;
+  padding: 0 clamp(24px, 6.05vw, 108px);
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background: linear-gradient(110deg, #111922 0%, #10161d 100%);
+  color: white;
+  position: relative;
+  z-index: 20;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  min-width: 455px;
+}
+
+.brand-logo {
+  width: 88px;
+  height: 52px;
+  object-fit: cover;
+  object-position: left center;
+  border-radius: 2px;
+  margin-right: 15px;
+  /* The supplied screenshot crop includes the original white logo area. */
+}
+
+.brand-copy {
+  line-height: 1;
+}
+
+.brand-name {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.brand-subtitle {
+  margin-top: 7px;
+  font-size: 12px;
+  color: #aeb5bd;
+  font-weight: 500;
+}
+
+.nav-links {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(27px, 3vw, 55px);
+  flex: 1;
+}
+
+.nav-links a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  color: #d9dde1;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: var(--red);
+}
+
+.quote-button,
+.mobile-quote {
+  background: var(--red);
+  color: white !important;
+  border-radius: 5px;
+  padding: 0 23px;
+  height: 50px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.quote-button:hover {
+  background: var(--red-dark);
+  transform: translateY(-1px);
+}
+
+.desktop-quote {
+  min-width: 194px;
+}
+
+.mobile-quote,
+.menu-button {
+  display: none !important;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 638px;
+  display: grid;
+  grid-template-columns: 54% 46%;
+  background: var(--off-white);
+}
+
+.hero-copy {
+  padding: 86px 50px 50px clamp(28px, 6.55vw, 117px);
+  position: relative;
+  z-index: 4;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.eyebrow span {
+  width: 40px;
+  height: 2px;
+  background: var(--red);
+  flex: 0 0 auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(47px, 4.1vw, 75px);
+  line-height: 0.99;
+  letter-spacing: -3px;
+  font-weight: 800;
+  color: #101820;
+}
+
+.red-dot {
+  color: var(--red);
+}
+
+.hero-description {
+  max-width: 610px;
+  margin: 28px 0 0;
+  color: #617083;
+  font-size: 19px;
+  line-height: 1.48;
+  letter-spacing: -0.25px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 35px;
+}
+
+.primary-button,
+.secondary-button {
+  height: 56px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.primary-button {
+  color: white;
+  background: var(--red);
+  min-width: 291px;
+}
+
+.primary-button:hover {
+  background: var(--red-dark);
+  transform: translateY(-1px);
+}
+
+.secondary-button {
+  color: #17212c;
+  border: 1px solid #aeb5bd;
+  background: transparent;
+  min-width: 263px;
+}
+
+.secondary-button:hover {
+  background: white;
+}
+
+/* ================= HERO ART ================= */
+
+.hero-art {
+  position: relative;
+  min-height: 638px;
+  overflow: hidden;
+  background: #ed1d29;
+}
+
+.hero-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Geometric overlays reproduce the red/white diagonal treatment. */
+.hero-art::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -10%;
+  bottom: -10%;
+  left: -8%;
+  width: 20%;
+  background: rgba(237, 29, 41, 0.92);
+  transform: skewX(-8deg);
+}
+
+.red-slash {
+  position: absolute;
+  z-index: 3;
+  top: -15%;
+  bottom: -15%;
+  transform: skewX(-12deg);
+  pointer-events: none;
+}
+
+.slash-one {
+  left: -10%;
+  width: 17%;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.slash-two {
+  left: -3%;
+  width: 8%;
+  background: rgba(239, 29, 43, 0.84);
+}
+
+/* ================= FEATURE STRIP ================= */
+
+.feature-strip {
+  min-height: 164px;
+  padding: 0 clamp(28px, 6.55vw, 117px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background: white;
+}
+
+.feature {
+  min-height: 67px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-right: 35px;
+  position: relative;
+}
+
+.feature:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 49px;
+  background: #d9dde1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.feature:not(:first-child) {
+  padding-left: 47px;
+}
+
+.feature-icon {
+  flex: 0 0 auto;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-icon {
+  /* Keeps the icon visually compact like the reference. */
+  transform: scale(0.92);
+}
+
+.feature strong {
+  display: block;
+  color: #17212c;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.feature span {
+  display: block;
+  color: #758294;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* ================= PLACEHOLDER SECTIONS ================= */
+
+.placeholder-section {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  background: #f7f8f9;
+  border-top: 1px solid #e5e7ea;
+  color: #8a939e;
+  font-size: 18px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1250px) {
+  .brand {
+    min-width: 330px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 51px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 980px) {
+  .navbar {
+    height: 76px;
+    padding: 0 25px;
+  }
+
+  .brand {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .brand-logo {
+    width: 70px;
+    height: 44px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+
+  .desktop-quote {
+    display: none;
+  }
+
+  .menu-button {
+    display: flex !important;
+    border: 0;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    height: auto;
+    padding: 12px 25px 25px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: #101820;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    height: 50px;
+    padding: 0 8px;
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  .mobile-quote {
+    display: inline-flex !important;
+    margin-top: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding: 65px 30px 55px;
+  }
+
+  .hero-art {
+    min-height: 500px;
+  }
+
+  .feature-strip {
+    padding: 35px 30px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .feature,
+  .feature:not(:first-child) {
+    padding: 0;
+  }
+
+  .feature:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .hero-copy {
+    padding: 48px 22px 45px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    gap: 10px;
+    line-height: 1.35;
+  }
+
+  .eyebrow span {
+    width: 28px;
+  }
+
+  h1 {
+    font-size: 43px;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-art {
+    min-height: 390px;
+  }
+
+  .feature-strip {
+    padding: 30px 22px;
+  }
+
+  .feature {
+    gap: 18px;
+  }
+}
