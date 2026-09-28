@@ -2,9 +2,9 @@ import { ArrowRight, Zap, ShieldCheck } from "lucide-react";
 
 export default function AboutHero() {
   return (
-    <div className="bg-paper">
+    <div className="bg-paper mt-20">
       {/* ---------- NAV ---------- */}
-      <header className="bg-[#14120F] px-6 lg:px-10">
+      {/* <header className="bg-[#14120F] px-6 lg:px-10">
         <div className="mx-auto max-w-7xl flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
             <div className="bg-crimson rounded-md px-3 py-2">
@@ -49,7 +49,7 @@ export default function AboutHero() {
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
-      </header>
+      </header> */}
 
       {/* ---------- HERO ---------- */}
       <section className="relative overflow-hidden min-h-[560px]">
@@ -144,7 +144,7 @@ export default function AboutHero() {
 
       {/* ---------- STATS STRIP ---------- */}
       <section className="border-t border-ink/10 bg-slate-10">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-4 grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-ink/10 gap-8 sm:gap-0">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-ink/10 gap-8 sm:gap-0">
           <Stat
             icon={<PhilippinesMark className="w-7 h-7 text-crimson" />}
             title="Nationwide parts & service"

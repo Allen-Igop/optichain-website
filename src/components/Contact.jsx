@@ -32,19 +32,24 @@ export default function Contact() {
               <dt className="text-paper/40 uppercase tracking-wide text-xs mb-1">
                 Phone
               </dt>
-              <dd className="text-paper/85">[Add OCSI contact number]</dd>
+              <dd className="text-paper/85">
+                +632 8839-0106 / +63917 105-2297
+              </dd>
             </div>
             <div>
               <dt className="text-paper/40 uppercase tracking-wide text-xs mb-1">
                 Email
               </dt>
-              <dd className="text-paper/85">[Add OCSI email address]</dd>
+              <dd className="text-paper/85">sales@optichainsolutions.com</dd>
             </div>
             <div>
               <dt className="text-paper/40 uppercase tracking-wide text-xs mb-1">
                 Office
               </dt>
-              <dd className="text-paper/85">[Add OCSI office address]</dd>
+              <dd className="text-paper/85">
+                Prime Corporate Center in Parañaque is located at Km. 15 East
+                Service Road, Marian Road-2, Parañaque, Metro Manila
+              </dd>
             </div>
           </dl>
         </div>
