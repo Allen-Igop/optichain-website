@@ -41,7 +41,7 @@ export default function TrustedPartners() {
         </p>
 
         {/* Logos */}
-        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-7 lg:gap-x-10">
+        <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-7 lg:gap-x-10">
           {PARTNERS.map((partner, index) => (
             <div
               key={partner.name}
@@ -50,7 +50,7 @@ export default function TrustedPartners() {
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                className="max-h-20 max-w-[130px]brightness-300 object-contain transition duration-300 hover:opacity-100"
+                className="max-h-24 max-w-[40px] lg:max-w-[80px] brightness-300 object-contain transition duration-300 hover:opacity-100"
               />
             </div>
           ))}
