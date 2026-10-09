@@ -76,7 +76,7 @@ export default function Solutions() {
           SOLUTIONS
       ====================================================== */}
       <section className="relative overflow-hidden border-t border-gray-100">
-        <div className="mx-auto max-w-[1400px] px-6 py-20 lg:px-12 lg:py-28">
+        <div className="mx-auto max-w-8xl px-6 py-20 lg:px-24 lg:py-28">
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             {/* LEFT */}
             <div>
@@ -94,7 +94,7 @@ export default function Solutions() {
                 />
               </div>
 
-              <h2 className="max-w-xl text-4xl font-extrabold leading-[1.02] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
+              <h2 className="max-w-xl text-4xl font-extrabold leading-[0.95] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
                 Equipment that works around your operation.
               </h2>
 

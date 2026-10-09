@@ -79,8 +79,8 @@ export default function AboutHero() {
         </div>
 
         {/* Text column, layered above the full-bleed photo */}
-        <div className="relative z-10 mx-auto max-w-7xl grid lg:grid-cols-12">
-          <div className="lg:col-span-6 flex flex-col justify-center px-6 lg:px-4 min-h-[480px]">
+        <div className="relative z-10 mx-auto max-w-8xl grid lg:grid-cols-12">
+          <div className="lg:col-span-6 flex flex-col justify-center px-6 lg:px-24 min-h-[480px]">
             <div className="mb-5 mt-4">
               <p className="text-xs font-extrabold tracking-[0.18em] text-crimson uppercase">
                 Authorized HELI Partner
@@ -151,7 +151,7 @@ export default function AboutHero() {
             subtitle="Fast, reliable support, anywhere."
           />
           <Stat
-            icon={<Zap className="w-7 h-7 text-crimson" />}
+            icon={<ElectricMark className="w-7 h-7 text-crimson" />}
             title="Electric, IC & warehouse-class units"
             subtitle="For every load, every industry."
             className="sm:pl-8"
@@ -183,4 +183,8 @@ function Stat({ icon, title, subtitle, className = "" }) {
 // Simple abstract archipelago mark (stylized, not geographically literal)
 function PhilippinesMark({ className = "" }) {
   return <img src="/ph.png" alt="" className="h-8 w-8" />;
+}
+
+function ElectricMark({ className = "" }) {
+  return <img src="/electric-icon.png" alt="" className="h-8 w-8" />;
 }

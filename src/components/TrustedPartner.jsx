@@ -3,54 +3,86 @@
 const PARTNERS = [
   {
     name: "SM",
-    logo: "/sm1.png",
+    logo: "/Clients/1.png",
   },
   {
     name: "Robinsons",
-    logo: "/robinsons1.png",
+    logo: "/Clients/2.png",
   },
   {
     name: "Ayala",
-    logo: "/ayala1.png",
+    logo: "/Clients/3.png",
   },
   {
     name: "Jollibee",
-    logo: "/jolli1.png",
+    logo: "/Clients/4.png",
   },
   {
     name: "Puregold",
-    logo: "/puregold1.png",
+    logo: "/Clients/5.png",
   },
   {
     name: "Landco",
-    logo: "/landco.png",
+    logo: "/Clients/6.png",
   },
   {
     name: "Metrobank",
-    logo: "/metrobank.png",
+    logo: "/Clients/7.png",
+  },
+  {
+    name: "Metrobank",
+    logo: "/Clients/8.png",
+  },
+  {
+    name: "Metrobank",
+    logo: "/Clients/9.png",
+  },
+  {
+    name: "Metrobank",
+    logo: "/Clients/10.png",
+  },
+
+  {
+    name: "Metrobank",
+    logo: "/Clients/11.png",
+  },
+  {
+    name: "Metrobank",
+    logo: "/Clients/12.png",
+  },
+  {
+    name: "Metrobank",
+    logo: "/Clients/13.png",
+  },
+  {
+    name: "Metrobank",
+    logo: "/Clients/14.png",
+  },
+  {
+    name: "Metrobank",
+    logo: "/Clients/15.png",
   },
 ];
 
 export default function TrustedPartners() {
   return (
-    <section className="border-b border-white/20 bg-diagonal-fade ">
+    <section className="border border-black">
       <div className="mx-auto max-w-[1600px] px-6 py-7 sm:px-10 lg:px-14">
-        {/* Heading */}
-        <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.18em] text-white/70">
+        <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.18em] text-CRIMSON">
           Trusted across Philippine operations
         </p>
 
-        {/* Logos */}
-        <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-7 lg:gap-x-10">
-          {PARTNERS.map((partner, index) => (
+        {/* 15 logos: 5 cols = 3 even rows on every screen size */}
+        <div className="grid grid-cols-3 items-center gap-x-4 gap-y-7 sm:grid-cols-5 lg:gap-x-10">
+          {PARTNERS.map((partner) => (
             <div
-              key={partner.name}
-              className="flex min-h-[42px] flex-1 items-center justify-center"
+              key={partner.logo}
+              className="flex min-h-[42px] items-center justify-center"
             >
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                className="max-h-24 max-w-[40px] lg:max-w-[80px] brightness-300 object-contain transition duration-300 hover:opacity-100"
+                className="max-h-24 w-full max-w-[40px] object-contain brightness-300 transition duration-300 hover:opacity-100 lg:max-w-[80px]"
               />
             </div>
           ))}

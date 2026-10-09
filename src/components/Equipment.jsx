@@ -28,7 +28,7 @@ const EQUIPMENT = [
 export default function Equipment() {
   return (
     <section id="equipment" className="bg-paper py-4 sm:py-4 lg:py-8">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-8xl px-6 lg:px-24">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.5fr] lg:items-end">
           {/* Heading */}
           <div>
@@ -36,7 +36,7 @@ export default function Equipment() {
               Equipment
             </p>
 
-            <h2 className="max-w-4xl text-4xl font-black leading-[0.95] tracking-[-0.035em] sm:text-5xl">
+            <h2 className="max-w-4xl text-4xl font-black leading-[0.95] tracking-[-0.035em] sm:text-6 xl">
               Built for the way your operation actually works.
             </h2>
 
